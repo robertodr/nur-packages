@@ -63,7 +63,7 @@ stdenv.mkDerivation rec {
       free = false;
     };
     homepage = "https://www.cendio.com/";
-    maintainers = with maintainers; [ robertodr ];
+    maintainers = with maintainers; [ robertodr shamilton ];
     platforms = platforms.linux;
   };
 }
