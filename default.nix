@@ -14,5 +14,7 @@
   modules = import ./modules; # NixOS modules
   overlays = import ./overlays; # nixpkgs overlays
 
+  inkscape-isometric-projections = pkgs.callPackage ./pkgs/inkscape-isometric-projection { };
   git-along = pkgs.callPackage ./pkgs/git-along { };
+  mplus-fonts = pkgs.callPackage ./pkgs/mplus-fonts { };
 }
