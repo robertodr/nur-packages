@@ -28,5 +28,4 @@ fetchFromGitHub {
     platforms = platforms.all;
     license = licenses.ofl;
   };
-};
 }
