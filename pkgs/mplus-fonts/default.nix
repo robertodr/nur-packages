@@ -12,16 +12,21 @@ fetchFromGitHub {
   sha256 = "2uxVzQ2xKnkIU47I9epfM3DrKkuWQjns3U/kc4zN8sQ=";
 
   postFetch = ''
-    tar xf $downloadedFile --strip=1
-    install -m444 -Dt $out/share/fonts/opentype fonts/otf/*.otf
+    mkdir -p $out/share/fonts/{truetype,opentype}/${pname}
+    mv $out/fonts/ttf/* $out/share/fonts/truetype/${pname}
+    mv $out/fonts/otf/* $out/share/fonts/opentype/${pname}
+    shopt -s extglob dotglob
+    rm -rf $out/!(share)
+    shopt -u extglob dotglob
   '';
 
   meta = with lib; {
-    description = "M+ Fonts";
+    description = "M+ Outline Fonts (GitHub release)";
     longDescription = "A little nifty font family for everyday use.";
-    homepage = "https://github.com/coz-m/MPLUS_FONTS";
-    license = licenses.ofl;
+    homepage = "https://mplusfonts.github.io";
+    maintainers = with maintainers; [ henrytill uakci robertodr ];
     platforms = platforms.all;
-    maintainers = with maintainers; [ robertodr ];
+    license = licenses.ofl;
   };
+};
 }
