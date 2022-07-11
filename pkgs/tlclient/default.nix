@@ -9,6 +9,7 @@
 , pcsclite
 }:
 let
+  # desktop icon
   tlclient-png = fetchurl {
     url = "https://aur.archlinux.org/cgit/aur.git/plain/tlclient.png?h=tlclient&id=fd126edd54a012caa8c9ce47ab8d7fb25e982e74";
     sha256 = "12i0wc4a8r69kwcdj0kjidwvmwhpb8jcwsqxw9dl5vm1gdqxyz5v";
