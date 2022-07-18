@@ -9,7 +9,7 @@ fetchFromGitHub {
   owner = "coz-m";
   repo = "MPLUS_FONTS";
   rev = "f605e3524130b8d814911d869315bc4fd4c2148c";
-  sha256 = "ZGZxD2RRXDYRq82VvkO18BaQVpR9yj+z+pGR4O7ehnc=;
+  sha256 = "ZGZxD2RRXDYRq82VvkO18BaQVpR9yj+z+pGR4O7ehnc=";
 
   postFetch = ''
     mkdir -p $out/share/fonts/{truetype,opentype}/${pname}
@@ -31,7 +31,7 @@ fetchFromGitHub {
     for
     everyday
     use.";
-      homepage = " https://mplusfonts.github.io ";
+    homepage = " https://mplusfonts.github.io ";
     maintainers = with maintainers; [ henrytill uakci robertodr ];
     platforms = platforms.all;
     license = licenses.ofl;
