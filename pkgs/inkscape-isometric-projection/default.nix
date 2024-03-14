@@ -4,7 +4,7 @@
 }:
 stdenv.mkDerivation rec {
   pname = "inkscape-isometric-projection";
-  version = "2.1";
+  version = "4.0";
 
   src = fetchFromGitHub {
     owner = "jdhoek";
